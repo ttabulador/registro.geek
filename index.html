@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Costa Geek</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="pantalla-principal" class="container active">
+        <h1 class="title">La Costa Geek</h1>
+        <div class="button-container">
+            <button class="btn btn-blue" onclick="mostrarPantallaRegistro()">Nuevo Registro</button>
+            <button class="btn btn-green" onclick="verRegistros()">Ver Registros</button>
+        </div>
+    </div>
+
+    <div id="pantalla-registro" class="container">
+        <h1 class="title">Registro de Concursos</h1>
+        <div class="button-container">
+            <button class="btn btn-blue" onclick="mostrarFormulario('formulario-cosplay')">Concurso de Cosplay</button>
+            <button class="btn btn-green" onclick="mostrarFormulario('formulario-dibujo')">Concurso de Dibujo</button>
+            <button class="btn btn-orange" onclick="mostrarFormulario('formulario-baile')">Concurso de Baile</button>
+        </div>
+        <button class="btn btn-back" onclick="volverMenuPrincipal()">Volver al Menú Principal</button>
+    </div>
+
+    <div id="formulario-cosplay" class="container">
+        <h2 class="title">Formulario Concurso de Cosplay</h2>
+        <form id="cosplayForm">
+            <input type="text" placeholder="Nombre y Apellido" required>
+            <select required>
+                <option value="">Edad</option>
+                <script>
+                    for (let i = 1; i <= 99; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <input type="text" placeholder="Localidad" required>
+            <input type="text" placeholder="Cosplay" required>
+            <input type="file" accept=".mp3" required> <!-- Campo para cargar archivo MP3 -->
+            <button type="submit">Enviar</button>
+        </form>
+        <button class="btn btn-back" onclick="volverPantallaRegistro()">Volver</button>
+    </div>
+
+    <div id="formulario-dibujo" class="container">
+        <h2 class="title">Formulario Concurso de Dibujo</h2>
+        <form id="dibujoForm">
+            <input type="text" placeholder="Nombre y Apellido" required>
+            <select required>
+                <option value="">Edad</option>
+                <script>
+                    for (let i = 1; i <= 99; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <input type="text" placeholder="Localidad" required>
+            <input type="file" accept=".mp3" required> <!-- Campo para cargar archivo MP3 -->
+            <button type="submit">Enviar</button>
+        </form>
+        <button class="btn btn-back" onclick="volverPantallaRegistro()">Volver</button>
+    </div>
+
+    <div id="formulario-baile" class="container">
+        <h2 class="title">Formulario Concurso de Baile</h2>
+        <form id="baileForm">
+            <input type="text" placeholder="Nombre y Apellido" required>
+            <input type="text" placeholder="Nombre Artístico" required>
+            <select required>
+                <option value="">Edad</option>
+                <script>
+                    for (let i = 1; i <= 99; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <input type="text" placeholder="Localidad" required>
+            <input type="file" accept=".mp3" required> <!-- Campo para cargar archivo MP3 -->
+            <button type="submit">Enviar</button>
+        </form>
+        <button class="btn btn-back" onclick="volverPantallaRegistro()">Volver</button>
+    </div>
+
+    <div id="pantalla-registros" class="container">
+        <h1 class="title">Ver Registros</h1>
+        <div class="button-container">
+            <button class="btn btn-blue" onclick="mostrarRegistros('cosplay')">Registros de Cosplay</button>
+            <button class="btn btn-green" onclick="mostrarRegistros('dibujo')">Registros de Dibujo</button>
+            <button class="btn btn-orange" onclick="mostrarRegistros('baile')">Registros de Baile</button>
+        </div>
+        <div id="registros-display"></div>
+        <button class="btn btn-back" onclick="volverMenuPrincipal()">Volver al Menú Principal</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
